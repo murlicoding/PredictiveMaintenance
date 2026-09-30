@@ -108,7 +108,7 @@ function Upload() {
         try {
 
             const response = await fetch(
-                "http://127.0.0.1:5001/upload",
+                "https://predictivemaintenance-i9rh.onrender.com/upload",
                 {
                     method: "POST",
                     body: formData
