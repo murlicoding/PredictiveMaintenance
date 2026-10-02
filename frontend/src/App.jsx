@@ -3,7 +3,8 @@ import {
   Routes,
   Route,
   Link,
-  useLocation
+  useLocation,
+  Navigate
 } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -156,14 +157,18 @@ function AppLayout() {
 
 
 function App() {
-
   return (
     <BrowserRouter>
 
       <Routes>
 
-        {/* Authentication */}
+        {/* Login is the first page */}
+        <Route
+          path="/"
+          element={<Navigate to="/login" replace />}
+        />
 
+        {/* Authentication */}
         <Route
           path="/login"
           element={<Login />}
@@ -174,9 +179,7 @@ function App() {
           element={<VerifyOTP />}
         />
 
-
         {/* Main application */}
-
         <Route
           path="/*"
           element={<AppLayout />}
@@ -187,6 +190,5 @@ function App() {
     </BrowserRouter>
   );
 }
-
 
 export default App;
