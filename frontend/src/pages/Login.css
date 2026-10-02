@@ -1,0 +1,166 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f4f7f6;
+}
+
+.login-left {
+  width: 55%;
+  background: #0f766e;
+  color: white;
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 100px;
+}
+
+.brand-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  background: white;
+  color: #0f766e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.login-info {
+  max-width: 600px;
+}
+
+.login-info h2 {
+  font-size: 44px;
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+
+.login-info p {
+  font-size: 18px;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 35px;
+}
+
+.feature {
+  margin: 18px 0;
+  font-size: 17px;
+}
+
+.feature span {
+  margin-right: 12px;
+  font-weight: bold;
+}
+
+.login-right {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 440px;
+  background: white;
+  padding: 45px;
+  border-radius: 22px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+}
+
+.mobile-logo {
+  display: none;
+}
+
+.login-card h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: #17202a;
+}
+
+.subtitle {
+  color: #68727d;
+  margin-bottom: 35px;
+}
+
+.login-card label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.login-card input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 1px solid #d5dadd;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.login-card input:focus {
+  border-color: #0f766e;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #0f766e;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background: #0b5f59;
+}
+
+.security {
+  text-align: center;
+  margin-top: 25px;
+  color: #7a858d;
+  font-size: 13px;
+}
+
+@media (max-width: 800px) {
+
+  .login-page {
+    display: block;
+  }
+
+  .login-left {
+    display: none;
+  }
+
+  .login-right {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+
+  .mobile-logo {
+    display: block;
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+}

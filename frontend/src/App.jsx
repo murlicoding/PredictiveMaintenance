@@ -10,10 +10,11 @@ import Home from "./pages/Home";
 import Upload from "./pages/Upload";
 import Dashboard from "./pages/Dashboard";
 import Predict from "./pages/Predict";
+import Login from "./pages/Login";
+import VerifyOTP from "./pages/VerifyOTP";
 
 
 function Sidebar() {
-
   const location = useLocation();
 
   return (
@@ -32,11 +33,13 @@ function Sidebar() {
 
       </div>
 
+
       <nav className="sidebar-nav">
 
         <p className="nav-title">
           MAIN MENU
         </p>
+
 
         <Link
           to="/"
@@ -156,7 +159,31 @@ function App() {
 
   return (
     <BrowserRouter>
-      <AppLayout />
+
+      <Routes>
+
+        {/* Authentication */}
+
+        <Route
+          path="/login"
+          element={<Login />}
+        />
+
+        <Route
+          path="/verify-otp"
+          element={<VerifyOTP />}
+        />
+
+
+        {/* Main application */}
+
+        <Route
+          path="/*"
+          element={<AppLayout />}
+        />
+
+      </Routes>
+
     </BrowserRouter>
   );
 }
